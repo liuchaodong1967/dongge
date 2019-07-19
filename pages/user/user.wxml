@@ -1,0 +1,132 @@
+<navbar parameter='{{parameter}}'></navbar>
+<view class='user'>
+   <view class='header bg-color acea-row row-between-wrapper'>
+      <view class='picTxt acea-row row-between-wrapper'>
+         <view class='pictrue'><image src='{{userInfo.avatar}}'></image></view>
+         <view class='text'>
+            <view class='acea-row row-middle'>
+               <view class='name line1'>{{userInfo.nickname || '请授权'}}</view>
+               <navigator hover-class='none' url='/pages/user_vip/index' class='member acea-row row-middle' wx:if="{{userInfo.vip}}">
+               <image src='{{userInfo.vip_icon}}'></image>{{userInfo.vip_name}}</navigator>
+            </view>
+            <view class='id' bindtap='goUserInfo'>ID：{{userInfo.uid || 0}}<text class='iconfont icon-bianji1'></text></view>
+         </view>
+      </view>
+      <text class='iconfont icon-shezhi' bindtap='Setting'></text>
+   </view>
+   <view class='wrapper'>
+      <view class='nav acea-row row-middle'>
+         <navigator class='item' hover-class='none' wx:if="{{userInfo.is_promoter || userInfo.statu==2}}" url='/pages/user_spread_money/index?type=2'>
+            <view>账户余额</view>
+            <view class='num'>{{userInfo.brokerage || 0}}</view>
+         </navigator>
+         <view class='item' wx:else>
+            <view>账户余额</view>
+            <view class='num'>{{userInfo.brokerage || 0}}</view>
+         </view>
+
+         <navigator class='item' hover-class='none' url='/pages/user_integral/index'>
+            <view>账户积分</view>
+            <view class='num'>{{userInfo.integral || 0}}</view>
+         </navigator>
+
+         <navigator class='item' hover-class='none' url='/pages/user_coupon/index'>
+            <view>优惠券</view>
+            <view class='num'>{{userInfo.couponCount || 0}}</view>
+         </navigator>
+      </view>
+      <view class='myOrder'>
+        <view class='title acea-row row-between-wrapper'>
+           <view>我的订单</view>
+           <navigator class='allOrder' hover-class='none' url='/pages/order_list/index'>全部订单<text class='iconfont icon-jiantou'></text></navigator>
+        </view>
+        <view class='orderState acea-row row-middle'>
+           <navigator class='item' hover-class='none' url='/pages/order_list/index?status=0'>
+              <view class='pictrue'><image src='/images/dfk.png'></image></view>
+              <view>待付款</view>
+           </navigator>
+            <navigator class='item' hover-class='none' url='/pages/order_list/index?status=1'>
+              <view class='pictrue'><image src='/images/dfh.png'></image></view>
+              <view>待发货</view>
+           </navigator>
+            <navigator class='item' hover-class='none' url='/pages/order_list/index?status=2'>
+              <view class='pictrue'><image src='/images/dsh.png'></image></view>
+              <view>待收货</view>
+           </navigator>
+            <navigator class='item' hover-class='none' url='/pages/order_list/index?status=3'>
+              <view class='pictrue'><image src='/images/dpj.png'></image></view>
+              <view>待评价</view>
+           </navigator>
+            <navigator class='item' hover-class='none' url='/pages/user_return_list/index'>
+              <view class='pictrue'><image src='/images/sh.png'></image></view>
+              <view>售后/退款</view>
+           </navigator>
+        </view>
+      </view>
+
+    <view class='myService'>
+      <view class='title acea-row row-middle'>个人管理</view>
+      <view class='serviceList acea-row row-middle'>
+          
+        <view class='item' bindtap='goPages' data-url='/pages/user_cash/index' >
+          <view class='pictrue'><image src='/images/record3.png'></image></view>
+          <view>我要提款</view>
+        </view>
+        <view class='item' bindtap='goPages' data-url='/pages/user_spread_money/index?type=1' >
+          <view class='pictrue'><image src='/images/balance.png'></image></view>
+          <view>提款记录</view>
+        </view>
+        <view class='item' bindtap='goPages' data-url='/pages/user_address_list/index' >
+          <view class='pictrue'><image src='/images/address.png'></image></view>
+          <view>地址管理</view>
+        </view>
+        <view class='item' bindtap='goPages' data-url='/pages/user_goods_collection/index' >
+          <view class='pictrue'><image src='/images/collection.png'></image></view>
+          <view>我的收藏</view>
+        </view>
+        <view class='item' bindtap='goPages' data-url='/pages/user_coupon/index' >
+          <view class='pictrue'><image src='/images/coupon.png'></image></view>
+          <view>我的优惠券</view>
+        </view>
+        <view class='item' bindtap='goPages' data-url='/pages/activity/user_goods_bargain_list/index' >
+          <view class='pictrue'><image src='/images/bargain.png'></image></view>
+          <view>我的砍价</view>
+        </view>
+         
+      </view>
+    </view>
+
+      <view class='myService'>
+         <view class='title acea-row row-middle'>我的服务</view>
+         <view class='serviceList acea-row row-middle'>
+            <view class='item' bindtap='goPages' data-url='/pages/user_spread_user/index' >
+              <view class='pictrue'><image src='/images/in4.png'></image></view>
+              <view>代理入口</view>
+            </view>
+            <view class='item' bindtap='goPages' data-url='/pages/user_money/index' >
+              <view class='pictrue'><image src='/images/in2.png'></image></view>
+              <view>活动入口</view>
+            </view>
+            <view class='item' bindtap='goPages' data-url='/pages/user_get_coupon/index' >
+              <view class='pictrue'><image src='/images/in2.png'></image></view>
+              <view>领优惠券</view>
+            </view>
+            <view class='item' bindtap='goPages' data-url='/pages/user_sgin/index' >
+              <view class='pictrue'><image src='/images/in3.png'></image></view>
+              <view>每日签到</view>
+            </view>
+            <view class='item' bindtap='goPages' data-url='/pages/news_list/index' >
+              <view class='pictrue'><image src='/images/in1.png'></image></view>
+              <view>行业资讯</view>
+            </view>
+            <button class='item' open-type='contact' hover-class='none'>
+              <view class='pictrue'><image src='/images/customer.png'></image></view>
+              <view>联系客服</view>
+            </button>
+         </view>
+      </view>
+
+   </view>
+   <view class="infos">系统由深圳童话世界提供支持</view>
+</view>
+<authorize bind:onLoadFun='onLoadFun'></authorize>

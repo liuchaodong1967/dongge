@@ -1,0 +1,94 @@
+.product-con .wrapper{background-color:#fff;}
+.product-con .wrapper .share{margin:0 30rpx;padding-top:25rpx;}
+.product-con .wrapper .share .money{font-size:28rpx;font-weight:bold;}
+.product-con .wrapper .share .money .num{font-size:48rpx;}
+.product-con .wrapper .share .money .vip-money{color:#282828;margin-left:13rpx;}
+.product-con .wrapper .share .money image{width:46rpx;height:21rpx;margin-left:7rpx;}
+.product-con .wrapper .share .money .vip-money{color:#282828;margin-left:13rpx;}
+.product-con .wrapper .share .iconfont{color:#515151;font-size:40rpx;margin-bottom:10rpx;
+}
+.product-con .wrapper .introduce{font-size:32rpx;font-weight:bold;margin:23rpx 30rpx 0 30rpx;}
+.product-con .wrapper .label{margin:0 30rpx;font-size:24rpx;color:#82848f;margin-top:22rpx;}
+.product-con .wrapper .coupon{padding:0 30rpx;border-top:1rpx solid #f5f5f5;margin-top:25rpx;height:80rpx;font-size:26rpx;color:#82848f;}
+.product-con .wrapper .coupon .hide{width:540rpx;height:80rpx;line-height:80rpx;}
+.product-con .wrapper .coupon .activity{height:40rpx;padding:0 20rpx;border:1rpx solid #f2857b;color:#e93323;font-size:24rpx;line-height:40rpx;position:relative;margin:19rpx 0 19rpx 15rpx;}
+.product-con .wrapper .coupon .activity:before {
+    content: ' ';
+    position: absolute;
+    width:7rpx;
+    height:10rpx;
+    border-radius:0 7rpx 7rpx 0;
+    border:1rpx solid #f2857b;
+    background-color:#fff;
+    bottom:50%;
+    left:-1rpx;
+    margin-bottom: -5rpx;
+    border-left-color:#fff;
+}
+.product-con .wrapper .coupon .activity:after {
+    content: ' ';
+    position: absolute;
+    width:7rpx;
+    height:10rpx;
+    border-radius:7rpx 0 0 7rpx;
+    border:1rpx solid #f2857b;
+    background-color:#fff;
+    right:-1rpx;
+    bottom:50%;
+    margin-bottom: -5rpx;
+     border-right-color:#fff;
+}
+.product-con .wrapper .coupon .iconfont{color:#7a7a7a;font-size:28rpx;}
+.product-con .attribute{background-color:#fff;padding:0 30rpx;font-size:26rpx;color:#82848f;margin-top:20rpx;height:80rpx;}
+.product-con .attribute .atterTxt{font-size:28rpx;color:#282828;}
+.product-con .attribute .iconfont{font-size:28rpx;color:#7a7a7a;}
+.product-con .userEvaluation{margin-top:20rpx;background-color:#fff;}
+.product-con .userEvaluation .title{height:86rpx;border-bottom:1rpx solid #eee;font-size:28rpx;color:#282828;margin-left:30rpx;padding-right:30rpx;}
+.product-con .userEvaluation .title .praise{font-size:28rpx;color:#808080;}
+.product-con .userEvaluation .title .praise .iconfont{color:#7a7a7a;font-size:28rpx;vertical-align:1rpx;margin-left:8rpx;}  
+.product-con .product-intro{margin-top:20rpx;}
+.product-con .product-intro .title{font-size:30rpx;color:#282828;height:86rpx;width:100%;background-color:#fff;text-align:center;line-height:86rpx;}
+.product-con .product-intro .conter{width:100%;}
+.product-con .product-intro .conter image{width:100%!important;display:block!important;}
+.goodsStyle{margin-top:1rpx;background-color:#fff;padding:22rpx 30rpx;}
+.goodsStyle .pictrue{width:120rpx;height:120rpx;}
+.goodsStyle .pictrue image{width:100%;height:100%;border-radius:6rpx;}
+.goodsStyle .text{width:545rpx;font-size:28rpx;color:#999;}
+.goodsStyle .text .name{width:360rpx;color:#282828;}
+.goodsStyle .text .money{text-align:right;}
+.goodsStyle .text .money .num{margin-top:7rpx;}
+.goodWrapper .item{margin-left:30rpx;padding-right:30rpx;border-bottom:2rpx solid #f0f0f0;height:180rpx;}
+.goodWrapper .item .pictrue{width:130rpx;height:130rpx;}
+.goodWrapper .item .pictrue image{width:100%;height:100%;border-radius:6rpx;}
+.goodWrapper .item .text{width:537rpx;position:relative;}
+.goodWrapper .item .text .name{font-size:28rpx;color:#282828;width:453rpx;}
+.goodWrapper .item .text .num{font-size:26rpx;color:#868686;}
+.goodWrapper .item .text .attr{font-size:20rpx;color:#868686;margin-top:7rpx;}
+.goodWrapper .item .text .money{font-size:26rpx;margin-top:17rpx;}
+.goodWrapper .item .text .evaluate{position:absolute;width:114rpx;height:46rpx;border:1rpx solid #bbb;border-radius:4rpx;text-align:center;line-height:46rpx;right:0;bottom:-5rpx;}
+.goodWrapper .item .text .evaluate.userEvaluated{font-size:26rpx;color:#aaa;background-color:#f7f7f7;border-color:#f7f7f7;}
+.promoterHeader{width:100%;height:220rpx;}
+.promoterHeader .headerCon{width:100%;height:100%;padding:0 88rpx 0 55rpx;box-sizing:border-box;font-size:28rpx;color:#fff;background-image:url('https://images.bang114.cn/public/system/images/x_style_css1.png');background-repeat:no-repeat;background-size:100% 100%;}
+.promoterHeader .headerCon .name{margin-bottom:10rpx;}
+.promoterHeader .headerCon .num{font-size:50rpx;}
+.promoterHeader .headerCon .iconfont{font-size:125rpx;}
+.sign-record .list .item .data{height:80rpx;line-height:80rpx;padding:0 30rpx;font-size:24rpx;color:#666;}
+.sign-record .list .item .listn{background-color:#fff;font-size:24rpx;color:#999;}
+.sign-record .list .item .listn .itemn{height:120rpx;border-bottom:1rpx solid #eee;padding-right:30rpx;margin-left:30rpx;}
+.sign-record .list .item .listn .itemn .name{width:390rpx;font-size:28rpx;color:#282828;margin-bottom:10rpx;}
+.sign-record .list .item .listn .itemn .num{font-size:36rpx;font-family: 'Guildford Pro';color:#16ac57;}
+.coupon-list{padding:0 30rpx;margin-top:25rpx;}
+.coupon-list .item{width:100%;height:170rpx;margin-bottom:16rpx;}
+.coupon-list .item .money{background-image:url('https://images.bang114.cn/public/system/images/x_style_css2.png');background-repeat:no-repeat;background-size:100% 100%;width:240rpx;height:100%;color:#fff;font-size:36rpx;font-weight:bold;text-align:center;line-height:170rpx;}
+.coupon-list .item .money.moneyGray{background-image:url('https://images.bang114.cn/public/system/images/x_style_css3.png');}
+.coupon-list .item .money .num{font-size:60rpx;}
+.coupon-list .item .text{width:450rpx;padding:0 17rpx 0 24rpx;box-sizing:border-box;background-color:#fff;}
+.coupon-list .item .text .condition{font-size:30rpx;color:#282828;height:93rpx;line-height:93rpx;border-bottom:1rpx solid #f0f0f0;}
+.coupon-list .item .text .data{font-size:20rpx;color:#999;height:76rpx;}
+.coupon-list .item .text .data .bnt{width:136rpx;height:44rpx;border-radius:22rpx;font-size:22rpx;text-align:center;line-height:44rpx;color:#fff;}
+.coupon-list .item .text .data .bnt.gray{background-color:#ccc;}
+.noCommodity{border-top:7rpx solid #f5f5f5;}
+.noCommodity .pictrue{width:414rpx;height:336rpx;margin:75rpx auto 30rpx auto;}
+.noCommodity .pictrue image{width:100%;height:100%;}
+
+
