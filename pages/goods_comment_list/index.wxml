@@ -1,0 +1,21 @@
+<navbar parameter='{{parameter}}'></navbar>
+<view class='evaluate-list'>
+   <view class='generalComment acea-row row-between-wrapper'>
+      <view class='acea-row row-middle font-color'>
+        <view class='evaluate'>买家评论</view>
+      </view>
+      <view><text class='font-color'>{{replyData.replyChance}}%</text>好评率</view>
+   </view>
+   <view class='nav acea-row row-middle'>
+      <view class='item {{type==0 ? "bg-color":""}}' bindtap='changeType' data-type='0'>全部({{replyData.replyCount}})</view>
+      <view class='item {{type==100 ? "bg-color":""}}' bindtap='changeType' data-type='100'>有图({{replyData.replyCount - replyData_de.pics}})</view>
+   </view>
+   <userEvaluation reply="{{reply}}"></userEvaluation>
+   <view class='loadingicon acea-row row-center-wrapper'>
+      <text class='loading iconfont icon-jiazai' hidden='{{loading==false}}'></text>{{loadTitle}}
+    </view>
+</view>
+<view class='noCommodity' wx:if="{{!replyData.replyCount && page > 1}}">
+   <view class='pictrue'><image src='/images/noEvaluate.png'></image></view>
+</view>
+<authorize bind:onLoadFun="onLoadFun"></authorize>

@@ -1,0 +1,45 @@
+<navbar parameter='{{parameter}}'></navbar>
+<view class='member-center'>
+  <view class='header'>
+   <swiper  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" bindchange="bindchange" previous-margin="30px" next-margin="30px">
+     <block wx:for="{{VipList}}" wx:key>
+        <swiper-item>
+           <view class="memberBg {{swiperIndex == index ? 'active' : 'quiet'}}" style='background-image:url({{item.image}})' mode='aspectFill'>
+              <view class='name'>{{item.name}}</view>
+		<view class='discount' wx:if="{{item.discount > 0}}">全场折扣:{{item.discount}}折<text class='iconfont icon-zhekou'></text></view>
+		<view class='discount' wx:else >无折扣享受</view>  
+		<view class='lock'  bindtap='vipApply' data-id='{{item.id}}'><text class='iconfont icon-xuanzhong1'></text>申请特权</view>
+             </view>
+          </swiper-item>
+        </block>
+     </swiper>
+   </view>
+
+   <view class='wrapper'>
+     <view class='title acea-row row-between-wrapper'>
+        <view><text class='iconfont icon-jingyanzhi'></text>晋升条件</view>
+     </view>
+     <view class='list'>
+        <view class='item' wx:for="{{task}}" wx:key>
+           <view class='top acea-row row-between-wrapper'>
+              <view class='name'>{{item.illustrate}}</view>
+           </view>
+        </view>
+     </view>
+   </view>
+
+   <view class='wrapper'>
+     <view class='title acea-row row-between-wrapper'>
+        <view><text class='iconfont icon-jingyanzhi'></text>会员福利</view>
+     </view>
+     <view class='list'>
+        <view class='item'>
+           <view class='top acea-row row-between-wrapper'>
+              <view><text>{{levelmsg}}</text></view>
+           </view>
+        </view>
+     </view>
+   </view>
+
+</view>
+<authorize bind:onLoadFun="onLoadFun"></authorize>

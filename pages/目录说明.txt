@@ -1,0 +1,51 @@
+常用的tp6: field
+
+常用js 
+JSON.stringify 对象转为json
+
+
+
+index 商品首页
+goods_details 商品详情
+order_addcart 购物车页面
+order_confirm 商品订单详情/下单页
+order_pay_status 下单支付状态页面
+------------------------------------------------
+user 个人中心
+user_coupon 我的优惠券列表
+user_address 地址页面
+user_address_list 地址列表
+user_info  修改用户信息
+order_list  个人中心订单列表
+order_details 订单详情页面
+goods_return 商品操作退款
+user_return_list 退货列表页面
+goods_comment_con 商品评价页面
+
+user_spread_user 代理管理中心
+user_spread_money 账户提款和收入明细
+user_spread_code 代理中心的生产首页推广图片
+user_spread_order 代理推广的订单列表
+user_spread_promoter 推广人统计
+
+user_cash 提款页面
+user_integral 用户积分中心
+
+
+user_sgin 用户签到
+user_sgin_list 签到列表
+-------------------------------------------------
+activity  拼团 秒杀  促销类目
+
+-------------------------------------------------
+goods_cate 商品分类页面
+goods_list   商品分类列表页面
+goods_search 搜索页面
+goods_comment_list 评价列表页面
+-------------------------------------------------
+user_get_coupon 领取优惠券页面
+
+-------------------------------------------------
+
+
+

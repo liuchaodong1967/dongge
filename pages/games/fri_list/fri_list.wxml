@@ -1,0 +1,35 @@
+<!--pages/fri_list/fri_list.wxml-->
+<view class="fri_list_page">
+  <view class="describe">
+    <text class="txt_b">奖励说明</text>
+    <text class="txt_p">领取好友的水源不会扣除好友的水源，由系统奖励好友每日得到的水源越多，您领取到的水源就越多</text>
+  </view>
+  <view class="list">
+    <view class="li">
+      <image src="/images/face.png"></image>
+      <view class="msg"><text class="txt_b">同一个梦中的情人</text><text class="txt_sp">可领水源1L</text></view>
+      <view class="btn">领取</view>
+    </view>
+    <view class="li">
+      <image src="/images/face.png"></image>
+      <view class="msg"><text class="txt_b">同一个梦中的情人</text><text class="txt_sp">可领水源1L</text></view>
+      <view class="btn">领取</view>
+    </view>
+    <view class="li">
+      <image src="/images/face.png"></image>
+      <view class="msg"><text class="txt_b">同一个梦中的情人</text><text class="txt_sp">可领水源1L</text></view>
+      <view class="btn">领取</view>
+    </view>
+    <view class="li">
+      <image src="/images/face.png"></image>
+      <view class="msg"><text class="txt_b">同一个梦中的情人</text><text class="txt_sp">可领水源1L</text></view>
+      <view class="btn">领取</view>
+    </view>
+    <view class="li">
+      <image src="/images/face.png"></image>
+      <view class="msg"><text class="txt_b">同一个梦中的情人</text><text class="txt_sp">可领水源1L</text></view>
+      <view class="btn">领取</view>
+    </view>
+  </view>
+  <button class="add_fri" type="default" size="default">添加好友</button>
+</view>

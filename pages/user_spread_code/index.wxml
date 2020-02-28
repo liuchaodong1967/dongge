@@ -1,0 +1,6 @@
+<navbar parameter='{{parameter}}'></navbar>
+<view class='distribution-posters'>
+   <image src="{{poster}}" class="image" mode='aspectFit'/>
+   <view class='keep bg-color' bindtap='savePosterPath'>保存到相册</view>
+</view>
+<authorize bind:onLoadFun="onLoadFun"></authorize>

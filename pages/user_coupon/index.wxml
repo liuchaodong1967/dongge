@@ -1,0 +1,26 @@
+<navbar parameter='{{parameter}}'></navbar>
+
+<view class='tab'>
+	<view class="{{type==0 ? 'bgcolor' : ''}}" id="0" data-id="0" bindtap='chektab'>待使用</view>
+	<view class="{{type==1 ? 'bgcolor' : ''}}" id="1" data-id="1" bindtap='chektab'>已使用</view>
+	<view class="{{type==2 ? 'bgcolor' : ''}}" id="2" data-id="2" bindtap='chektab'>已过期</view>
+</view>
+
+
+<view class='coupon-list' wx:if="{{couponsList.length}}">
+  <view class='item acea-row row-center-wrapper' wx:for="{{couponsList}}" wx:key>
+     <view class='money {{item._type == 0 ? "moneyGray" : ""}}'>￥<text class='num'>{{item.coupon_price}}</text></view>
+     <view class='text'>
+        <view class='condition line1'>{{item.coupon_title}}</view>
+        <view class='data acea-row row-between-wrapper'>
+           <view>{{item.add_time}}-{{item.end_time}}</view>
+           <view class='bnt gray' wx:if="{{item._type==0}}">{{item.msg}}</view>
+           <view class='bnt bg-color' wx:else>{{item.msg}}</view>
+        </view>
+     </view>
+  </view>
+</view>
+<view class='noCommodity' wx:if="{{!couponsList.length && loading==true}}">
+   <view class='pictrue'><image src='/images/noCoupon.png'></image></view>
+</view>
+<authorize bind:onLoadFun="onLoadFun"></authorize>

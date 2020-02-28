@@ -1,0 +1,18 @@
+page{background-color:#fa533d!important;}
+.group-list .header{background-image:url('https://images.bang114.cn/public/system/images/x_yaoqinghaoyou1.png');background-repeat:no-repeat;background-size:100% 100%;width:100%;height:450rpx;}
+.group-list .list{margin-top:-108rpx;}
+.group-list .list .item{width:690rpx;height:208rpx;background-color:#fff;border-radius:6rpx;padding:0 24rpx;box-sizing:border-box;margin:0 auto 20rpx auto;}
+.group-list .list .item .pictrue{width:160rpx;height:160rpx;}
+.group-list .list .item .pictrue image{width:100%;height:100%;border-radius:6rpx;}
+.group-list .list .item .text{width:458rpx;font-size:30rpx;color:#282828;}
+.group-list .list .item .text .team{height:38rpx;border-radius:4rpx;font-size:22rpx;margin-top:20rpx;}
+.group-list .list .item .text .team .iconfont{width:54rpx;background-color:#ffdcd9;text-align:center;color:#dd3823;height: 100%;}
+.group-list .list .item .text .team .num{text-align:center;padding:0 6rpx;height:100%;}
+.group-list .list .item .text .bottom{margin-top:7rpx;}
+.group-list .list .item .text .bottom .money{font-size:24rpx;font-weight:bold;color:#282828;}
+.group-list .list .item .text .bottom .money .num{font-size:32rpx;}
+.group-list .list .item .text .bottom .money .y-money{font-size:24rpx;color:#999;font-weight:normal;text-decoration:line-through;margin-left:10rpx;}
+.group-list .list .item .text .bottom .groupBnt{font-size:26rpx;color:#fff;width:146rpx;height:54rpx;text-align:center;line-height:54rpx;border-radius:4rpx;}
+.group-list .list .item .text .bottom .groupBnt .iconfont{font-size:25rpx;vertical-align:2rpx;margin-left:10rpx;}
+
+

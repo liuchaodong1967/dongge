@@ -1,0 +1,14 @@
+<navbar parameter='{{parameter}}'></navbar>
+<view class='cash-withdrawal'>
+     <view class='wrapper'>
+        <view class='list'>
+          <form bindsubmit="subCash" report-submit='true'>
+             <view class='tip2'>账户余额: {{userInfo.now_money}} 元</view>
+             <view class='value'><input placeholder='0' type='digit' placeholder-class='placeholder2' name="money"></input></view>
+               <view class='tip'>微信提款为即时到账，直接进入余额</view>
+             <button formType="submit" class='bnt bg-color'>提现</button>
+          </form>   
+        </view>
+     </view>
+</view>
+<authorize bind:onLoadFun='onLoadFun'></authorize>

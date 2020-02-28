@@ -1,0 +1,21 @@
+<!--pages/change/change.wxml-->
+<view class="change_page">
+  <view class="select">
+    <text class="txt_b">选择提现金额(元)</text>
+    <view class="list">
+      <view class="num {{activeIndex == 1 ? 'active' : ''}}" bindtap="changePrice" data-id="1"><text>新人专享</text>1</view>
+      <view class="num {{activeIndex == 2 ? 'active' : ''}}" bindtap="changePrice" data-id="2"><text>新人专享</text>2</view>
+      <view class="num {{activeIndex == 3 ? 'active' : ''}}" bindtap="changePrice" data-id="3"><text>新人专享</text>5</view>
+      <view class="num {{activeIndex == 4 ? 'active' : ''}}" bindtap="changePrice" data-id="4">20</view>
+      <view class="num {{activeIndex == 5 ? 'active' : ''}}" bindtap="changePrice" data-id="5">50</view>
+      <view class="num {{activeIndex == 6 ? 'active' : ''}}" bindtap="changePrice" data-id="6">100</view>
+    </view>
+  </view>
+  <view class="count"><text>68921</text>当前可用能量</view>
+  <view class="power_count">兑换消耗能量：55341</view>
+  <button>立即提现</button>
+  <view class="describe">
+    <text class="txt_b">提现说明</text>
+    <text class="txt_p">1、提取后直接到您的微信账户\n2、如有任何疑问请添加官方客服微信：XXXXXX</text>
+  </view> 
+</view>

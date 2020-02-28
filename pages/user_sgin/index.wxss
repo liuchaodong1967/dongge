@@ -1,0 +1,42 @@
+@import '/css/guildford.wxss';
+.sign .header{width:100%;height:310rpx;}
+.sign .header .headerCon{padding:0 0 0 30rpx;height:234rpx;}
+.sign .header .headerCon .left{width:530rpx;font-size:32rpx;color:#fff;font-weight:bold;}
+.sign .header .headerCon .left .integral text{font-size:24rpx;margin-top:19rpx;background-color:#ff9000;text-align:center;border-radius:6rpx;font-weight:normal;padding:4rpx 15rpx;}
+.sign .header .headerCon .text{width:410rpx;}
+.sign .header .headerCon .left .pictrue{width:100rpx;height:100rpx;border-radius:50%;border:4rpx solid #ecddbc;} 
+.sign .header .headerCon .left .pictrue image{width:100%;height:100%;border-radius:50%;}
+.sign .header .headerCon .right{width:142rpx;height:66rpx;background-color:#fff;border-radius:50rpx 0 0 50rpx;font-size:24rpx;color:#ff9000;}
+.sign .header .headerCon .right .iconfont{font-size:33rpx;padding:0 10rpx 0 30rpx;margin-top:5rpx;}
+.sign .wrapper{background-color:#fff;margin:-80rpx 20rpx 0 20rpx;border-radius:15rpx;padding-bottom:80rpx;position:relative;}
+.sign .wrapper .list{padding:0 30rpx;height:240rpx;}
+.sign .wrapper .list .item{font-size:22rpx;color:#8a8886;text-align:center;}
+.sign .wrapper .list .item .rewardTxt{width:74rpx;height:32rpx;background-color:#f4b409;border-radius:16rpx;font-size:20rpx;color:#a57d3f;line-height:32rpx;}
+.sign .wrapper .list .item .num{font-size:30rpx;color:#999;}
+.sign .wrapper .list .item .num.on{color:#ff9000;}
+.sign .wrapper .list .item .venus{background-image:url('https://images.bang114.cn/public/system/images/x_sgin.png');background-repeat:no-repeat;background-size:100% 100%;width:56rpx;height:56rpx;margin:10rpx 0;}
+.sign .wrapper .list .item .venus.venusSelect{background-image:url('https://images.bang114.cn/public/system/images/x_sgin2.png');}
+.sign .wrapper .list .item .venus.reward{background-image:url('https://images.bang114.cn/public/system/images/x_sgin3.png');width:75rpx;height:56rpx;}
+.sign .wrapper .but{width:400rpx;height:76rpx;font-size:30rpx;line-height:76rpx;color:#fff;border-radius:50rpx;text-align:center;margin:0 auto;}
+.sign .wrapper .but.on{background-color: #999 !important;}
+.sign .wrapper .lock{background-image:url('https://images.bang114.cn/public/system/images/x_sgin4.png');background-repeat:no-repeat;background-size:100% 100%;width:558rpx;height:68rpx;position:absolute;left:50%;transform: translateX(-50%);bottom:-42rpx;z-index:9;}
+.sign .wrapper2{margin-top:15rpx;padding:73rpx 0 0 0;}
+.sign .wrapper2 .tip{font-size:30rpx;color:#666;text-align:center;}
+.sign .wrapper2 .list2{margin:45rpx 0 49rpx 0;}
+.sign .wrapper2 .list2 .item{width:80rpx;height:116rpx;background-repeat:no-repeat;background-size:100% 100%;color:#fff;font-size:72rpx;text-align:center;line-height:116rpx;margin-right:19rpx;background-image:url('https://images.bang114.cn/public/system/images/x_sgin5.png');}
+.sign .wrapper2 .list2 .data{font-size:30rpx;color:#232323;}
+.sign .wrapper2 .tip2{font-size:30rpx;color:#999999;padding:0 55rpx;text-align:center;line-height:1.5;}
+.sign .list3{margin:45rpx 37rpx 0 37rpx;border-top:1px dashed #eee;}
+.sign .list3 .item{align-items:center;justify-content:space-between;border-bottom:1px solid #eee;height:130rpx;}
+.sign .list3 .item .name{color:#232323;font-size:30rpx;width:400rpx;}
+.sign .list3 .item .data{font-size:24rpx;color:#bbbbbb;margin-top:9rpx;}
+.sign .list3 .item .num{font-size:36rpx;font-family: 'Guildford Pro';}
+.sign .list3 .loading{font-size:26rpx;color:#282828;height:97rpx;line-height:97rpx;text-align:center;}
+.sign .list3 .loading .iconfont{font-size:25rpx;color:#212121;vertical-align:2rpx;margin-left:10rpx;}
+.sign .signTip{width:644rpx;height:645rpx;position:fixed;top:50%;left:50%;margin-left:-322rpx;margin-top:-322.5rpx;z-index:99;text-align:center;transition:all 0.3s ease-in-out 0s;opacity:0;transform: scale(0);}
+.sign .signTip .signTipLight{background-image:url('https://images.bang114.cn/public/system/images/x_sgin6.png');background-repeat:no-repeat;background-size:100% 100%;width:100%;height:100%;}
+.sign .signTip.on{opacity:1;transform: scale(1);}
+.sign .signTip .signTipCon{background-image:url('https://images.bang114.cn/public/system/images/x_sgin7.png');background-repeat:no-repeat;background-size:100% 100%;width:420rpx;height:420rpx;margin-top:-700rpx;position:relative;}
+.sign .signTip .signTipCon .state{font-size:34rpx;color:#fff;margin-top:150rpx;}
+.sign .signTip .signTipCon .integral{font-size:30rpx;color:rgba(255,255,255,0.6);margin-top:9rpx;}
+.sign .signTip .signTipCon .signTipBnt{font-size:30rpx;color:#eb4331;width:260rpx;height:76rpx;background-color:#f8d168;border-radius:38rpx;line-height:76rpx;margin:48rpx auto 0 auto;}

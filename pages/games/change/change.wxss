@@ -1,0 +1,17 @@
+/* pages/change/change.wxss */
+page{background-color:#f6f6f6;}
+.change_page .select{background-color:#fff;padding:55rpx 0rpx 0rpx 40rpx;}
+.change_page .select .txt_b{display:block;font-size:30rpx;}
+.change_page .select .list {clear:both;overflow:hidden;padding-top:42rpx;padding-bottom:16rpx;}
+.change_page .select .list .num{display:block;width:200rpx;height:100rpx;border-radius:10rpx;background-color:#cccccc;color:#fff;float:left;margin-right:34rpx;margin-bottom:34rpx;position:relative;overflow:hidden;line-height:100rpx;text-align:center;font-size:40rpx;font-weight:bold}
+.change_page .select .list .num text{display:block;position:absolute;right:0rpx;top:0rpx;font-size:20rpx;width:89rpx;height:29rpx;background-color:#a8a8a8;border-radius:0rpx 8rpx 0rpx 8rpx;line-height:29rpx;text-align:center;}
+.change_page .select .list .active{background-color:#009b3d;}
+.change_page .select .list .active text{background-color:#ff0000}
+.change_page .count{height:100rpx;margin-top:16rpx;background-color:#fff;padding:0 40rpx;line-height:100rpx;font-size:30rpx;color:#000;}
+.change_page .count text{float:right;}
+.change_page .power_count{display:block;font-size:40rpx;line-height:40rpx;text-align:center;color:#009b3d;font-weight:bold;padding-top:62rpx;}
+.change_page button{display:block;width:640rpx;height:86rpx;background-color:#009b3d;border-radius:86rpx;color:#fff;padding:0rpx;line-height:86rpx;margin:60rpx auto 0rpx;}
+.change_page .describe{display:block;padding:60rpx 38rpx;}
+.change_page .describe .txt_b{display:block;font-size:30rpx;line-height:30rpx;}
+.change_page .describe{display:block;padding:60rpx 38rpx;}
+.change_page .describe .txt_p{display:block;line-height:42rpx;font-size:28rpx;padding-top:23rpx;color:#999;}

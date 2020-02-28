@@ -1,0 +1,62 @@
+<navbar parameter='{{parameter}}'></navbar>
+<view class="promoter-list">
+    <view class='promoterHeader bg-color'>
+        <view class='headerCon acea-row row-between-wrapper'>
+            <view>
+                <view class='name'>推广人数</view>
+                <view><text class='num'>{{teamCount}}</text>人</view>
+            </view>
+            <view class='iconfont icon-tuandui'></view>
+        </view>
+    </view>
+    <view class='nav acea-row row-around'>
+        <view class="{{grade == 0 ? 'item on' : 'item'}}" bindtap='setType' data-grade='0'>一级({{total}})</view>
+        <view class="{{grade == 1 ? 'item on' : 'item'}}" bindtap='setType' data-grade='1'>二级({{totalLevel}})</view>
+    </view>
+    <view class='search acea-row row-between-wrapper'>
+        <view class='input'><input placeholder='点击搜索会员名称' placeholder-class='placeholder' value='{{keyword}}' bindblur='setKeyword'></input><text class='iconfont icon-guanbi'></text></view>
+        <view class='iconfont icon-sousuo2' bindtap='setRecordList'></view>
+    </view>
+    <view class='list'>
+        <view class="sortNav acea-row row-middle">
+            <view class="sortItem" data-sort="spread_count ASC" bindtap='setSort' wx:if="{{sort == 'spread_count DESC'}}">按下级人数
+              <image src='/images/sort1.png'></image>
+            </view>
+            <view class="sortItem" data-sort="" bindtap='setSort' wx:elif="{{sort == 'spread_count ASC'}}">按下级人数
+              <image src='/images/sort3.png'></image>
+            </view>
+            <view class="sortItem" data-sort="spread_count DESC" bindtap='setSort' wx:else>按下级人数
+              <image src='/images/sort2.png'></image>
+            </view>
+            <view class="sortItem" data-sort="add_time ASC" bindtap='setSort' wx:if="{{sort == 'add_time DESC'}}">按加入时间
+              <image src='/images/sort1.png'></image>
+            </view>
+            <view class="sortItem" data-sort="" bindtap='setSort' wx:elif="{{sort == 'add_time ASC'}}">按加入时间
+              <image src='/images/sort3.png'></image>
+            </view>
+            <view class="sortItem" data-sort="add_time DESC" bindtap='setSort' wx:else>按加入时间
+              <image src='/images/sort2.png'></image>
+            </view>
+            
+        </view>
+        <block wx:for="{{recordList}}" wx:key>
+          <view class='item acea-row row-between-wrapper'>
+              <view class="picTxt acea-row row-between-wrapper">
+                  <view class='pictrue'><image src='{{item.avatar}}'></image></view>
+                  <view class='text'>
+                      <view class='name line1'>{{item.nickname}}</view>
+                      <view>加入时间: {{item.add_time}}</view>
+                  </view>
+              </view>
+              <view class="right">
+                  <view>下级</view>
+		  <view><text class='font-color'>{{item.spread_count ? item.spread_count : 0}}</text> 人</view>
+              </view>
+          </view>
+        </block>
+	<view wx:if="{{!recordList.length}}" style="display:flex;justify-content: center">
+		<image style="width:414rpx; height:336rpx;" src='/images/noData.png'></image>
+	</view>
+    </view>
+</view>
+

@@ -1,0 +1,5 @@
+goods_combination 拼团
+goods_combination_details 拼团详情页面
+
+
+seckill 秒杀

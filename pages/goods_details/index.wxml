@@ -1,0 +1,150 @@
+<navbar parameter='{{parameter}}'></navbar>
+<view class='product-con'>
+      <productConSwiper imgUrls="{{storeInfo.slider_image}}"></productConSwiper>
+      <view class='wrapper'>
+         <view class='share acea-row row-between row-bottom'>
+           <view class='money font-color'>
+		    <text class='num'>￥{{storeInfo.price}}</text>
+		    <text class='vip-money'  wx:if="{{sharePacket.isState}}">￥{{vip_picer}}</text>
+		    <image wx:if="{{sharePacket.isState}}" src="/images/vip.png"></image>
+           </view>
+           <view class='iconfont icon-fenxiang'  bindtap='listenerActionSheet'></view>
+         </view>
+         <view class='introduce'>{{storeInfo.store_name}}</view>
+         <view class='label acea-row row-between-wrapper'>
+           <view>原价:￥{{storeInfo.ot_price}}</view>
+           <view>库存:{{storeInfo.stock}}{{storeInfo.unit_name}}</view>
+           <view>销量:{{storeInfo.fsales}}{{storeInfo.unit_name}}</view>
+         </view>
+
+	 <view class='coupon acea-row row-between-wrapper' bindtap='showup1'>
+           <view class='hide line1 acea-row'>
+             <view class='activity'>放心购物</view>
+	      <text class='inteaTxt'>享受180天质保 让您购物无忧</text>
+           </view>
+           <view class='iconfont icon-jiantou'></view>
+         </view>
+	  <view class='coupon acea-row row-between-wrapper' bindtap='showup2'>
+           <view class='hide line1 acea-row'>
+             <view class='activity'>5星服务</view>
+	     <text class='inteaTxt'>优质服务 急速退款 </text>
+           </view>
+           <view class='iconfont icon-jiantou'></view>
+         </view>
+      </view>
+       
+      <view class='userEvaluation' wx:if="{{replyCount}}">
+         <view class='title acea-row row-between-wrapper'>
+           <view>用户评价({{replyCount}})</view>
+           <navigator class='praise' hover-class='none' url='/pages/goods_comment_list/index?product_id={{id}}'>
+              <text class='font-color'>{{replyChance}}%</text>好评率<text class='iconfont icon-jiantou'></text>
+           </navigator>
+         </view>
+         <userEvaluation reply="{{reply}}"></userEvaluation>
+      </view>
+      <view class='product-intro'>
+        <view class='title'>产品介绍</view>
+        <view class='conter'>
+           <template is="wxParse" data="{{wxParseData:description.nodes}}"/>
+        </view>
+      </view>
+      <view style='height:120rpx;'></view>
+      <view class='footer acea-row row-between-wrapper'>             
+
+        <navigator open-type='switchTab' url='/pages/index/index' class="item">
+          <view class='iconfont icon-shouye-xianxing'></view>
+          <view>首页</view>
+        </navigator>
+        
+        <button open-type="contact" hover-class='none' class='item'>
+          <view class='iconfont icon-kefu'></view>
+          <view>客服</view>
+        </button>
+
+        <navigator open-type='switchTab' class="animated item {{animated==true?'bounceIn':''}}" url='/pages/order_addcart/order_addcart'>
+          <view class='iconfont icon-gouwuche1'><text class='num bg-color'>{{CartCount || 0}}</text></view>
+          <view>购物车</view>
+        </navigator>
+        <view class='bnt acea-row'>
+           <view class='joinCart' bindtap='joinCart'>加入购物车</view>
+           <view class='buy' bindtap='goBuy'>立即购买</view>
+        </view>
+      </view>  
+      <shareRedPackets sharePacket="{{sharePacket}}" bind:listenerActionSheet="listenerActionSheet"></shareRedPackets>
+</view>
+
+<!-- 弹窗 -->
+<view class="botupbox" hidden="{{flag}}">
+	<view class="upcont1" hidden="{{flag1}}">
+		<view class="li">
+			<icon/>
+			<text>店铺180天放心购</text>
+			<view>为保证您在购买前到购买后再到使用中整套流程中不会有任何顾虑，本平台特别提出承若保障，让您购物安心，使用放心</view>
+		</view>
+		<view class="li">
+			<icon/>
+			<text>收货前</text>
+			<view>商品包裹出现破损，可无理由拒收</view>
+		</view>
+		<view class="li">
+			<icon/>
+			<text>收货后</text>
+			<view>商品质量出现问题，可无理由退换</view>
+		</view>
+		<view class="li">
+			<icon/>
+			<text>使用中</text>
+			<view>180天内出现质量问题，可无理由退换货 </view>
+		</view>
+		<view class="btn" bindtap="hideup">关闭</view>
+	</view>
+	<view class="upcont1" hidden="{{flag2}}">
+		<view class="li">
+			<icon/>
+			<text>5星为您服务</text>
+			<view>退款2小时急速处理，咨询实时响应</view>
+		</view>
+		<view class="btn" bindtap="hideup">关闭</view>
+	</view>
+</view>
+
+<!-- 分享按钮 -->
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet" class='pro-wrapper' hover-class='none'>
+    <action-sheet-item hover-class='none'>
+        <button open-type="share" class='contact' hover-class='none'>
+          <view class='iconn'></view>
+          发送给朋友
+         </button>
+        <button class='contact' bindtap='goPoster' hover-class='none'>
+          <view class='iconn iconn1'></view>
+          生成海报
+        </button>
+    </action-sheet-item>
+</action-sheet>
+
+<!-- 海报展示 -->
+<view class='poster-pop' wx:if="{{posterImageStatus}}">
+   <image src='/images/poster-close.png' class='close' bindtap='posterImageClose'></image>
+   <image src='{{posterImage}}'></image>
+   <view class='save-poster' bindtap='savePosterPath'>保存到手机</view>
+</view>
+<!-- 海报展示后面的遮罩层 -->
+<view class='mask' wx:if="{{posterImageStatus}}"></view>
+
+<canvas class="canvas" canvas-id='myCanvas' wx:if="{{canvasStatus}}"></canvas>
+
+<!-- 组件 -->
+<product-window 
+  attribute='{{attribute}}' 
+  productAttr="{{productAttr}}" 
+  productSelect="{{productSelect}}" 
+  bind:myevent="onMyEvent" 
+  bind:ChangeAttr="ChangeAttr" 
+  bind:ChangeCartNum="ChangeCartNum"
+  id='product-window'
+></product-window>
+<coupon-list-window coupon='{{coupon}}' bind:ChangCouponsClone="ChangCouponsClone" bind:ChangCoupons="ChangCoupons"></coupon-list-window>
+<authorize bind:onLoadFun="onLoadFun" isAuto="{{isAuto}}" iShidden="{{iShidden}}"></authorize>
+<!-- html转wxml -->
+<import src="/wxParse/wxParse.wxml"/>
+

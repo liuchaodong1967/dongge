@@ -1,0 +1,3 @@
+navbar  首页头部
+recommend 相关推荐
+productConSwiper 产品详情幻灯片组件

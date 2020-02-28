@@ -1,0 +1,9 @@
+{
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "navbar": "/components/navbar/index",
+    "goodList": "/components/goodList/index",
+    "promotionGood": "/components/promotionGood/index",
+    "authorize": "/components/authorize/authorize"
+  }
+}

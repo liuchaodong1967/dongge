@@ -1,0 +1,40 @@
+<navbar parameter='{{parameter}}'></navbar>
+<view class="promoter-order">
+    <view class='promoterHeader bg-color'>
+        <view class='headerCon acea-row row-between-wrapper'>
+            <view>
+                <view class='name'>待返佣订单数</view>
+                <view><text class='num'>{{recordCount || 0}}</text>单</view>
+            </view>
+            <view class='iconfont icon-2'></view>
+        </view>
+    </view>
+    <view class='list' wx:if="{{recordCount}}">
+      <block wx:for="{{recordList}}" wx:key>
+       <view class='item'>
+       	 <view class='title'></view>
+          <view class='listn'>
+             <view class='itenm'>
+                <view class='top acea-row row-between-wrapper'>
+                   <view class='pictxt acea-row row-between-wrapper'>
+                      <view class='pictrue'><image src='{{item.userinfo.avatar}}'></image></view>
+                      <view class='text line1'>{{item.userinfo.nickname}}</view>
+                   </view>
+                   <view class='money'>待入账：<text class='font-color'>￥{{item.money}}</text></view>
+                </view>
+                <view class='bottom'>
+                   <view><text class='name'>订单编号：</text>{{item.order_id}}</view>
+                   <view><text class='name'>下单时间：</text>{{item.add_time}}</view>
+		   <view><text class='name'>收入性质：</text>{{item.hierarchy==0 ? '分润奖励' : '推广奖励'}}</view>
+                </view>
+             </view>
+          </view>
+       </view>
+      </block> 
+    </view>
+
+     <view wx:if="{{!recordCount}}" style="display:flex;justify-content: center">
+		<image style="width:414rpx; height:336rpx;" src='/images/noData.png'></image>
+    </view>
+
+</view>

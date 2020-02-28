@@ -1,0 +1,82 @@
+/**index.wxss**/
+.tree_page .bg {position:fixed;left:0rpx;top:0rpx;width:100%;height:100%;}
+.tree_page .bg image{width:100%;top:-150rpx;position:relative}
+.tree_page .user_msg{display:-webkit-box;width:302rpx;height:96rpx;border:1rpx solid #40baf9;background-color:#2ba5e4;position:fixed;z-index:2;border-radius:0rpx 96rpx 96rpx 0rpx;top:30rpx;left:0rpx;}
+.tree_page .user_msg .face{display:block;width:70rpx;height:70rpx;border-radius:50%;margin:10rpx 0rpx 0rpx 22rpx;border:4rpx solid #fff;}
+.tree_page .user_msg .msg{display:flex;-webkit-box-flex:1;width:100%;justify-content:center;flex-direction:column;padding-right:22rpx;}
+.tree_page .user_msg .msg .name{display:block;font-size:26rpx;line-height:26rpx;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#fff;padding-left:14rpx;}
+.tree_page .user_msg .msg .score{display:flex;width:158rpx;height:34rpx;background-color:#75daf8;border-radius:34rpx;margin-top:8rpx;align-items:center;margin-left:10rpx;}
+.tree_page .user_msg .msg .score image{display:block;width:28rpx;height:28rpx;margin-left:11rpx;}
+.tree_page .user_msg .msg .score .txt_var{display:block;font-size:24rpx;font-weight:bold;color:#fff;padding-left:10rpx;}
+/* 树 */
+.tree_page .tree{display:block;position:fixed;left:0rpx;top:355rpx;}
+.tree_page .tree .leaf{width:506rpx;height:341rpx;margin-left:122rpx;position:relative;z-index:2;animation:treeActive 2.0s linear infinite}
+@keyframes treeActive{
+  0% {transform:scale(1)}
+  50% {transform:scale(1.02)}
+  100% {transform:scale(1)}
+}
+.tree_page .tree .leaf image{width:100%;}
+.tree_page .tree .trunk{width:374rpx;height:349rpx;margin-left:188rpx;margin-top:-60rpx;}
+.tree_page .tree .trunk image{width:374rpx;height:349rpx;}
+
+/* 动物 */
+.animal .deer_min{width:55rpx;height:81rpx;position:fixed;left:68rpx;top:658rpx;}
+.animal .deer_min image{width:55rpx;height:81rpx;}
+.animal .deer_max{width:83rpx;height:121rpx;position:fixed;left:364rpx;top:766rpx;}
+.animal .deer_max image{width:83rpx;height:121rpx;}
+.animal .duck_min{width:34rpx;height:26rpx;position:fixed;right:26rpx;top:660rpx;}
+.animal .duck_min image{width:34rpx;height:26rpx;}
+.animal .duck_max{width:44rpx;height:34rpx;position:fixed;right:78rpx;top:690rpx;}
+.animal .duck_max image{width:44rpx;height:34rpx;}
+
+/* 操作 */
+.operation{position:fixed;left:0rpx;bottom:0rpx;width:100%;}
+.operation .tool{clear:both;overflow:hidden}
+.operation .get_water{width:80rpx;height:86rpx;float:left;margin-left:30rpx;}
+.operation .get_water image{width:80rpx;height:86rpx;}
+.operation .change{width:80rpx;height:86rpx;float:left;margin-left:30rpx;}
+.operation .change image{width:80rpx;height:86rpx;}
+.operation .musicBtn{width:88rpx;height:88rpx;float:right;margin-right:30rpx;}
+.operation .musicBtn image{width:88rpx;height:88rpx;}
+.my_water{background-color:#fff;width:100%;border-radius:12rpx 12rpx 0rpx 0rpx;margin-top:16rpx;padding-bottom:60rpx;}
+.my_water .key{display:block;font-size:30rpx;line-height:30rpx;padding:46rpx 0rpx 0rpx 32rpx;}
+.collect {display:-webkit-box;-webkit-box-align:center}
+.collect .kettle{width:142rpx;height:114rpx;margin-right:60rpx;}
+.collect .process{-webkit-box-flex:1;width:100%;padding:4rpx 40rpx 0rpx 40rpx;}
+.collect .process .line{width:100%;height:28rpx;background-color:#d3f3fe;border-radius:28rpx;overflow:hidden}
+.collect .process .line view{height:28rpx;background:linear-gradient(to bottom , #7cd7f2 ,#2fa0ee);width:0%;border-radius:28rpx;}
+.collect .process .num{width:60rpx;height:47rpx;position:relative;margin-left:-30rpx;}
+.collect .process .num image{position:absolute;left:0rpx;top:0rpx;width:60rpx;height:47rpx;display:block;}
+.collect .process .num text{display:block;position:relative;color:#fff;font-size:20rpx;z-index:2;line-height:36rx;height:36rpx;text-align:center;}
+.collect .process .time{display:block;font-size:26rpx;color:#666;line-height:26rpx;padding-top:14rpx;}
+.sun_power {position:fixed;height:504rpx;top:128rpx;z-index:999;left:0rpx;}
+.sun_power .sun_icon{position:absolute;left:500rpx;bottom:0rpx;transition:all 1.0s ease;}
+.sun_power .sun_icon .icon{width:82rpx;height:82rpx;animation:sunActive_1 3.0s linear infinite;position:relative;}
+@keyframes sunActive_1{
+  0% {transform:scale(1)}
+  25% {transform:scale(1.1)}
+  50% {transform:scale(1)}
+  75% {transform:scale(0.9)}
+  100% {transform:scale(1)}
+}
+.sun_power .sun_icon.active{transition:all 2s ease;}
+.sun_power .sun_icon .collect_tips{position:absolute;width:273rpx;height:89rpx;top:-86rpx;left:-96rpx;}
+.collect_btn{width:273rpx;height:89rpx;position:fixed;right:20rpx;top:40rpx;}
+.collect_btn image{width:273rpx;height:89rpx;position:absolute}
+.collect_btn text{position:absolute;width:273rpx;height:89rpx;text-align:center;line-height:70rpx;color:#fff;z-index:9;text-shadow:4rpx 4rpx 5rpx #999999}
+
+.task_box{display:block;position:fixed;left:0rpx;top:0rpx;background-color:rgba(0, 0, 0, 0.7);z-index:999;width:100%;height:100%;}
+.task_box .cont{display:block;position:absolute;bottom:0rpx;background-color:#f2f2f2;border-radius:30rpx 30rpx 0rpx 0rpx;width:100%;overflow:hidden}
+.task_box .cont .close{display:block;width:100rpx;height:100rpx;position:absolute;right:0rpx;top:0rpx;font-size:50rpx;line-height:100rpx;font-family:"黑体";text-align:center;color:#666;}
+.task_box .cont .txt_b{display:block;font-size:32rpx;line-height:100rpx;text-align:center;font-weight:bold;color:#000;background-color:#fff;}
+.task_box .cont .list{padding:40rpx 30rpx;}
+.task_box .cont .list .li{display:-webkit-box;background-color:#fff;padding:26rpx 24rpx;border-radius:10rpx;-webkit-box-align:center;margin-bottom:20rpx;}
+.task_box .cont .list .li image{display:block;width:100rpx;height:100rpx;border-radius:100%;}
+.task_box .cont .list .li .msg{display:block;-webkit-box-flex:1;width:100%;padding-left:22rpx;}
+.task_box .cont .list .li .msg .txt_var{display:block;line-height:30rpx;font-size:30rpx;}
+.task_box .cont .list .li .msg .txt_sp{display:block;font-size:24rpx;line-height:24rpx;color:#666;padding-top:14rpx;}
+.task_box .cont .list .li .btn_1 button{display:block;width:130rpx;height:50rpx;line-height:50rpx;text-align:center;border-radius:50rpx;color:#fff;font-size:24rpx;padding:0rpx;margin:0rpx;background-color:#ff3c00;min-height:50rpx;}
+.task_box .cont .list .li .btn_2 button{display:block;width:130rpx;height:50rpx;line-height:50rpx;text-align:center;border-radius:50rpx;color:#fff;font-size:24rpx;padding:0rpx;margin:0rpx;background-color:#009b3d;min-height:50rpx;}
+.task_box .cont .list .li .btn_3 button{display:block;width:130rpx;height:50rpx;line-height:50rpx;text-align:center;border-radius:50rpx;font-size:24rpx;padding:0rpx;margin:0rpx;background-color:#fff;min-height:50rpx;border:1rpx solid #009b3d;color:#009b3d}
+.task_box .cont .list .li .btn_3 button.hasSign{border:1rpx solid #ccc;color:#999}

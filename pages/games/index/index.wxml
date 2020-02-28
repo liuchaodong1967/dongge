@@ -1,0 +1,82 @@
+<navbar parameter='{{parameter}}'></navbar>
+<!--index.wxml-->
+<view class="tree_page">
+  <view class="bg"><image src="/images/games/body_bg.jpg" mode="widthFix"></image></view>
+  <view class="collect_btn" bindtap="collectAll"><image src="/images/games/collect_tips.png"></image><text>点击一键收集</text></view>
+  <view class="user_msg">
+    <image class="face" src="/images/games/face.png"></image>
+    <view class="msg">
+      <text class="name">我的大佬我的大佬</text>
+      <view class="score">
+        <image class="sunshine" src="/images/games/sunshine.png"></image>
+        <text class="txt_var">15200</text>
+      </view>
+    </view>
+  </view>
+  <!-- 树体 -->
+  <view class="tree">
+    <view class="leaf"><image src="/images/games/leaf.png" mode="widthFix"></image></view>
+    <view class="trunk"><image src="/images/games/trunk.png" mode="widthFix"></image></view>
+  </view>
+
+  <!-- 阳光 -->
+  <view class="sun_power">
+    <block wx:for = "{{sunshineArr}}" wx:for-index="idx" wx:for-item="item">
+      <view class="sun_icon" style="bottom:{{item.bottom}}rpx;left:{{item.left}}rpx;transform:scale({{item.scaleNum}})" bindtap="sunMove" data-id = "{{idx}}" animation="{{scaleAnimation}}"><image class="icon" src="/images/games/sunshine.png"></image></view>
+    </block>
+  </view> 
+
+  <!-- 动物 -->
+  <view class="animal">
+    <view class="deer_min" style = "display:{{animalNum == 1 ? 'block' : 'none'}}"><image src="/images/games/deer_min.png"></image></view>
+    <view class="deer_max" style = "display:{{animalNum == 2 ? 'block' : 'none'}}"><image src="/images/games/deer_max.png"></image></view>
+    <view class="duck_min"><image src="/images/games/duck_min.png"></image></view>
+    <view class="duck_max"><image src="/images/games/duck_max.png"></image></view>
+  </view>
+
+  <!-- 工具 -->
+  <view class="operation">
+    <view class="tool">
+      <view class="musicBtn"><image src="/images/games/music.png"></image></view>
+      <view class="get_water" bindtap="openTaskBox"><image src="/images/games/get_water.png"></image></view>
+      <navigator class="change"><image src="/images/games/change.png"></image></navigator>
+    </view>
+    <view class="my_water">
+      <text class="key">我的水源</text>
+      <view class="collect">
+        <view class="process">
+          <view class="num" style="left:{{collectNum}}%"><text>{{collectNum}}%</text><image src="/images/games/num.png"></image></view>
+          <view class="line"><view style="width:{{collectNum}}%"></view></view>
+          <view class="time">水源消耗时间剩余：01:52:02</view>
+        </view>
+        <image class="kettle" src="/images/games/kettle.png"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 弹窗 -->
+  <view class="task_box" style="display:{{taskBoxState}}">
+    <view class="cont">
+      <view class="close" bindtap="closeTaskBox">×</view>
+      <text class="txt_b">做任务·得水源</text>
+      <view class="list">
+        <view class="li">
+          <image src="/images/games/water.png"></image>
+          <view class="msg"><text class="txt_var">看视频免费领水源</text><text class="txt_sp">每次得20升水源</text></view>
+          <view class="btn_1"><button>立即领取</button></view>
+        </view>
+        <view class="li">
+          <image src="/images/games/water.png"></image>
+          <view class="msg"><text class="txt_var">享好友的水源</text><text class="txt_sp">好友越多系统奖励越多</text></view>
+          <view class="btn_2"><button>去完成</button></view>
+        </view>
+        <view class="li">
+          <image src="/images/games/water.png"></image>
+          <view class="msg"><text class="txt_var">每日签到领水源</text><text class="txt_sp">随机获得10-20升水源</text></view>
+          <view class="btn_3"><button class="hasSign">已经签到</button></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 授权登录组件 -->
+<authorize bind:onLoadFun="onLoadFun" isAuto="{{isAuto}}" iShidden="{{iShidden}}"></authorize>
