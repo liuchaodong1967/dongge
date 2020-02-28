@@ -1,4 +1,0 @@
-<navbar parameter='{{parameter}}'></navbar>
-<authorize bind:onLoadFun="onLoadFun"></authorize>
-
-<home></home>
